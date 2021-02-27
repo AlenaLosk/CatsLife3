@@ -1,0 +1,28 @@
+public class CatsLife3 {
+    public static void main(String[] args) {
+        Cat laska = new Cat("Laska");
+        Cat.showCount();
+        laska.showNumber();
+        for (int i = 0; i < 10; i++) {
+            new Cat();
+        }
+        Cat murzik = new Cat("Murzik");
+        Cat.showCount();
+        laska.showNumber();
+        murzik.showNumber();
+        Bowl bowl = new Bowl(50);
+        Plate plate = new Plate();
+        plate.setPlate(100);
+        laska.eat(plate);
+        laska.drink(bowl);
+        System.out.println("Сейчас в миске осталось - " + bowl.getBowl() + " ед. воды");
+        System.out.println("Сейчас в тарелке осталось - " + plate.getPlate() + " ед. еды");
+        murzik.eat(plate);
+        murzik.eat(plate);
+        System.out.println("Сейчас в тарелке осталось - " + plate.getPlate() + " ед. еды");
+        murzik.drink(bowl);
+        murzik.drink(bowl);
+        murzik.drink(bowl);
+        System.out.println("Сейчас в миске осталось - " + bowl.getBowl() + " ед. воды");
+    }
+}
