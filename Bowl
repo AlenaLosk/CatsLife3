@@ -1,0 +1,19 @@
+public class Bowl {
+    int quantityOfWater;
+
+    Bowl() {
+        quantityOfWater = 50;
+    }
+
+    Bowl(int quantityOfWater) {
+        this.quantityOfWater = quantityOfWater;
+    }
+
+    public void setBowl(int quantityOfWater) {
+        this.quantityOfWater = quantityOfWater;
+    }
+
+    public int getBowl() {
+        return quantityOfWater;
+    }
+}
