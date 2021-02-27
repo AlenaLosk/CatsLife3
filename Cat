@@ -1,0 +1,41 @@
+public class Cat {
+    static int count;
+    String name;
+    int id;
+
+    Cat() {
+        count++;
+        this.id = count;
+    }
+
+    Cat(String name) {
+        this();
+        this.name = name;
+    }
+
+    void showNumber() {
+        System.out.println("Порядковый номер кошки " + name + " - " + id);
+    }
+
+    static void showCount() {
+        System.out.println("Общее число кошек - " + count);
+    }
+    void eat(Plate plate) {
+        int quantityOfFood = plate.getPlate() - id; // кошка съедает еды в соответствии со своим порядковым номером
+        if (quantityOfFood < 1) {
+            plate.setPlate(0);
+            System.out.println("Еда закончилась!");
+        } else {
+            plate.setPlate(quantityOfFood);
+        }
+    }
+    void drink(Bowl bowl) {
+        int quantityOfWater = bowl.getBowl() - id * 2; // кошка выпивает воды в 2 раза больше, чем ее порядковый номер
+        if (quantityOfWater < 1) {
+            bowl.setBowl(0);
+            System.out.println("Вода закончилась!");
+        } else {
+            bowl.setBowl(quantityOfWater);
+        }
+    }
+}
