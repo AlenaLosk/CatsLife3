@@ -1,0 +1,19 @@
+public class Plate {
+    int quantityOfFood;
+
+    Plate() {
+        quantityOfFood = 100;
+    }
+
+    Plate(int quantityOfFood) {
+        this.quantityOfFood = quantityOfFood;
+    }
+
+    public void setPlate(int quantityOfFood) {
+        this.quantityOfFood = quantityOfFood;
+    }
+
+    public int getPlate() {
+        return quantityOfFood;
+    }
+}
